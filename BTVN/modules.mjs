@@ -1,21 +1,18 @@
 function TongDiemCacMon(list){
-	var diem = 0;
+	var diem = list[0].tinhD();
 	for (var i = 0; i <list.length; ++i) {
-		var tem = 0;
-		tem = list[i].tinhD()*list[i].stc;
+		var tem = list[i].tinhD()/list[i].stc;
 		diem+=tem;
 	}
-	return diem;
+	return diem.toPrecision(3);
 }
 
 function TinhDiemTB(list) {
-	var diem = 0;
+	var diem = list[0].tinhD();
 	for (var i = 0; i <list.length; ++i) {
-		var tem = 0;
-		tem = list[i].tinhD()*list[i].stc;
-		diem+=tem;
+		diem +=list[i].tinhD();
 	}
-	return diem/list.length;
+	return (diem/list.length).toPrecision(3);
 }
 
 function min(list) {
@@ -28,7 +25,7 @@ function min(list) {
 				ma = list[i].get_maMH();
 			}
 	}
-	return ma+": ("+min+"đ)";
+	return ma+": ("+min.toPrecision(3)+"đ)";
 }
 
 function max(list){
@@ -43,7 +40,7 @@ function max(list){
 		}
 
 	}
-	return ma+": ("+max+"đ)";
+	return ma+": ("+max.toPrecision(3)+"đ)";
 }
 
 function hi(){

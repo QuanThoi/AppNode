@@ -23,6 +23,7 @@ class MonHoc{
 	}
 
 	tinhD(){
+		//var num = (this.DHK1+2*this.DHK2)/3;
 		return (this.DHK1+2*this.DHK2)/3;
 	}
 
