@@ -28,7 +28,7 @@ function min(list) {
 				ma = list[i].get_maMH();
 			}
 	}
-	return ma;
+	return ma+": ("+min+"đ)";
 }
 
 function max(list){
@@ -43,7 +43,7 @@ function max(list){
 		}
 
 	}
-	return ma;
+	return ma+": ("+max+"đ)";
 }
 
 function hi(){
